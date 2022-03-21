@@ -46,6 +46,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/OBUZORLdEFO3HofPcHMa-1024x654.jpeg"))); // NOI18N
 
+        jLabel4.setBackground(new java.awt.Color(153, 153, 153));
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 2, 18)); // NOI18N
         jLabel4.setText("Login page for hospital management");
 
