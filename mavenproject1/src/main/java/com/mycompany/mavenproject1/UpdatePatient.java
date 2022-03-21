@@ -430,7 +430,12 @@ public class UpdatePatient extends javax.swing.JFrame {
 
             persons.get(selectedIndex).setCity(jTextField4.getText().trim());
             persons.get(selectedIndex).setHouse_no(Integer.parseInt(jTextField7.getText().trim()));
-            persons.get(selectedIndex).setPhone_num(Integer.parseInt(jTextField6.getText().trim()));
+            if(jTextField6.getText().trim().length()>10||jTextField6.getText().trim().length()<10)
+            {
+                JOptionPane.showMessageDialog(null, "please enter valid phone number");
+                return;
+            }
+            persons.get(selectedIndex).setPhone_num(Long.parseLong(jTextField6.getText().trim()));
 
              savePerson();
         }
@@ -441,7 +446,7 @@ public class UpdatePatient extends javax.swing.JFrame {
         // TODO add your handling code here:
         int index= jComboBox1.getSelectedIndex();
         persons.remove(index);
-        patients.remove(index);
+        
             saveAfterDelete();
 
     }//GEN-LAST:event_jButton2ActionPerformed
