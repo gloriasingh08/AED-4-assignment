@@ -235,7 +235,7 @@ public class PersonCreate extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -319,7 +319,26 @@ public class PersonCreate extends javax.swing.JFrame {
                  JOptionPane.showMessageDialog(null , "please enter valid social security number");
                 return;
             }
-        
+        try{
+              int house=Integer.parseInt(jTextField4.getText().trim());
+               long contact=Long.parseLong(jTextField3.getText().trim());
+               int SSN= Integer.parseInt(jTextField6.getText().trim());
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "please enter number format");
+            return;
+        }
+        try{
+              String f_name=jTextField1.getText().trim();
+              String l_name=jTextField2.getText().trim();
+              String community=jTextField7.getText().trim();
+              String city=jTextField5.getText().trim();
+        }
+        catch(Exception f)
+        {
+            JOptionPane.showMessageDialog(null,"Please enter characters!");
+                return;
+        }
         
             
         

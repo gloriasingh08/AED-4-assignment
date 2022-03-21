@@ -386,8 +386,8 @@ public class UpdatePatient extends javax.swing.JFrame {
        jTextField3.setText(persons.get(selectedIndex).getCommunity());
        jTextField4.setText(persons.get(selectedIndex).getCity());
        jTextField5.setText(persons.get(selectedIndex).getSSN()+"");
-       jTextField6.setText(persons.get(selectedIndex).getHouse_no()+"");
-       jTextField7.setText(persons.get(selectedIndex).getPhone_num()+"");
+       jTextField6.setText(persons.get(selectedIndex).getPhone_num()+"");
+       jTextField7.setText(persons.get(selectedIndex).getHouse_no()+"");
         
        
             
@@ -405,6 +405,25 @@ public class UpdatePatient extends javax.swing.JFrame {
         else
 
         {
+            try{
+              
+              String community=jTextField3.getText().trim();
+              String city=jTextField4.getText().trim();
+                 }
+                catch(Exception f)
+                {
+                    JOptionPane.showMessageDialog(null,"Please enter characters!");
+                        return;
+                }
+             try{
+              int house=Integer.parseInt(jTextField7.getText().trim());
+               long contact=Long.parseLong(jTextField6.getText().trim());
+               int SSN= Integer.parseInt(jTextField5.getText().trim());
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "please enter number format");
+            return;
+        }
              int selectedIndex =jComboBox1.getSelectedIndex();
            
             persons.get(selectedIndex).setCommunity(jTextField3.getText().trim());

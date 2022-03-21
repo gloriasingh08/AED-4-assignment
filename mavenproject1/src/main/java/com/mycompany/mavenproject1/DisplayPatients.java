@@ -151,9 +151,9 @@ public class DisplayPatients extends javax.swing.JFrame {
         input.close();
         file1.close();
         inputPer.close();
-      
-        JOptionPane.showMessageDialog(null, dataPat.size());
-        JOptionPane.showMessageDialog(null, dataPer.size());
+//      
+//        JOptionPane.showMessageDialog(null, dataPat.size());
+//        JOptionPane.showMessageDialog(null, dataPer.size());
         DefaultTableModel table = (DefaultTableModel) jTable1.getModel();
         table.setRowCount(0);
         
